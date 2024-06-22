@@ -1,6 +1,8 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useTypewriter, Typewriter, Cursor } from "react-simple-typewriter";
 import Skill from "./components/Skill";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function App() {
     const [text] = useTypewriter({
@@ -115,111 +117,98 @@ function App() {
         },
     ]);
 
-    const [aboutDiv, setAboutDiv] = useState(null);
-    const [details1Div, setDetails1Div] = useState(null);
-    const [skillsDiv, setSkillsDiv] = useState(null);
-    const [projectsDiv, setProjectsDiv] = useState(null);
-    const [servicesDiv, setServicesDiv] = useState(null);
-    const [contactDiv, setContactDiv] = useState(null);
+    const [details, setDetails] = useState([
+        {
+            detailType: "Date of Birth",
+            detailValue: "10th October 2003",
+        },
+        {
+            detailType: "City",
+            detailValue: "Ghaziabad",
+        },
+        {
+            detailType: "Age",
+            detailValue: "20",
+        },
+        {
+            detailType: "Degree",
+            detailValue: "Bachelor of Technology (Pursuing)",
+        },
+        {
+            detailType: "Email",
+            detailValue: "20031010.aman@gmail.com",
+        },
+    ]);
 
-    window.addEventListener("scroll", () => {
-        console.log(contactDiv.offsetHeight)
-        console.log(window.scrollY)
-        if (aboutDiv && window.scrollY >= aboutDiv.offsetHeight) {
-            aboutDiv.classList.add("animate-fadeLeft");
-            aboutDiv.classList.remove("opacity-0");
-        }
-        if (details1Div && window.scrollY >= details1Div.offsetHeight) {
-            details1Div.classList.add("animate-fadeLeft");
-            details1Div.classList.remove("opacity-0");
-        }
-        if (skillsDiv && window.scrollY >= skillsDiv.offsetHeight) {
-            skillsDiv.classList.add("animate-fadeLeft");
-            skillsDiv.classList.remove("opacity-0");
-        }
-        if (projectsDiv && window.scrollY >= projectsDiv.offsetHeight) {
-            projectsDiv.classList.add("animate-fadeLeft");
-            projectsDiv.classList.remove("opacity-0");
-        }
-        if (servicesDiv && window.scrollY >= servicesDiv.offsetHeight) {
-            servicesDiv.classList.add("animate-fadeLeft");
-            servicesDiv.classList.remove("opacity-0");
-        }
-        if (contactDiv && window.scrollY >= contactDiv.offsetHeight) {
-            // console.log("contact section")
-            contactDiv.classList.add("animate-fadeLeft");
-            contactDiv.classList.remove("opacity-0");
-        }
-
-        // console.log(scrollTop)
-    });
+    const skillMemo = useMemo(()=> skills.map(s => {
+        return (<Skill skill={s.skill} percentage={"" + s.percentage} />)
+      }),[skills])
 
     useEffect(() => {
-        setAboutDiv(document.querySelector("#aboutDiv"));
-        setDetails1Div(document.querySelector("#details1"));
-        setSkillsDiv(document.querySelector("#skills"));
-        setProjectsDiv(document.querySelector("#projects"));
-        setServicesDiv(document.querySelector("#services"));
-        setContactDiv(document.querySelector("#contact"));
+        AOS.init();
         window.scrollTo(0, 0);
-
-        return () => {
-            setAboutDiv(null);
-            setDetails1Div(null);
-            setSkillsDiv(null);
-            setProjectsDiv(null);
-            setServicesDiv(null);
-            setContactDiv(null);
-        };
     }, []);
 
     return (
         <>
-            <div className=" h-screen">
-                <div className="h-full bg-[#212121] text-[white] flex flex-col justify-center items-center gap-[1%] animate-fadeIn">
-                    <h1 className=" text-[300%] font-semibold">
-                        Aman Krishnarth
-                    </h1>
+            <div className=" h-screen w-screen p-0 m-0">
+                <div className="h-full w-screen bg-[#212121] text-[white]">
+                    <div
+                        data-aos="fade-down"
+                        data-aos-duration="2000"
+                        className=" h-full flex flex-col justify-center items-center gap-[1%]"
+                    >
+                        <h1 className=" text-[300%] font-semibold">
+                            Aman Krishnarth
+                        </h1>
 
-                    <p className="text-[200%]">
-                        I'm a <span className="text-[orange]">{text}</span>
-                        <span>
-                            <Cursor cursorBlinking={true} cursorColor="white" />
-                        </span>
-                    </p>
+                        <p className="text-[200%]">
+                            I'm a <span className="text-[orange]">{text}</span>
+                            <span>
+                                <Cursor
+                                    cursorBlinking={true}
+                                    cursorColor="white"
+                                />
+                            </span>
+                        </p>
 
-                    <div className="flex items-center w-full justify-evenly pt-[7%]">
-                        <a
-                            href="https://github.com/Aman-Krishnarth"
-                            target="_blank"
-                        >
-                            <img
-                                src="https://imgs.search.brave.com/KXL45Ky6mn4L5JZiL_5V069ITX6UnIz6ZTlN8LGDJfI/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/bG9nby53aW5lL2Ev/bG9nby9HaXRIdWIv/R2l0SHViLUljb24t/V2hpdGUtRGFyay1C/YWNrZ3JvdW5kLUxv/Z28ud2luZS5zdmc.svg"
-                                alt="Github"
-                                className=" h-16 w-16"
-                            />
-                        </a>
-                        <a
-                            href="https://www.linkedin.com/in/aman-krishnarth-577138295/"
-                            target="_blank"
-                        >
-                            <img
-                                src="https://imgs.search.brave.com/Z4tzkHgsMw-bIt6x5iWiYUP3cIEOuKvMnPul3MLE70U/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9ibG9n/LndhYWxheHkuY29t/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDIx/LzAxL2luZGV4LnBu/Zw"
-                                alt="LinkedIn"
-                                className=" h-16 w-16"
-                            />
-                        </a>
+                        <div className="flex items-center w-full justify-evenly pt-[7%]">
+                            <a
+                                href="https://github.com/Aman-Krishnarth"
+                                target="_blank"
+                            >
+                                <img
+                                    src="https://imgs.search.brave.com/KXL45Ky6mn4L5JZiL_5V069ITX6UnIz6ZTlN8LGDJfI/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/bG9nby53aW5lL2Ev/bG9nby9HaXRIdWIv/R2l0SHViLUljb24t/V2hpdGUtRGFyay1C/YWNrZ3JvdW5kLUxv/Z28ud2luZS5zdmc.svg"
+                                    alt="Github"
+                                    className=" h-16 w-16"
+                                />
+                            </a>
+                            <a
+                                href="https://www.linkedin.com/in/aman-krishnarth-577138295/"
+                                target="_blank"
+                            >
+                                <img
+                                    src="https://imgs.search.brave.com/Z4tzkHgsMw-bIt6x5iWiYUP3cIEOuKvMnPul3MLE70U/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9ibG9n/LndhYWxheHkuY29t/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDIx/LzAxL2luZGV4LnBu/Zw"
+                                    alt="LinkedIn"
+                                    className=" h-16 w-16"
+                                />
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <div className="bg-black">
                     <div
                         id="aboutDiv"
-                        className="flex flex-col gap-6 items-center opacity-0"
+                        className="flex flex-col gap-6 items-center"
+                        data-aos="fade-right"
+                        data-aos-duration="2000"
+                        data-aos-delay="500"
+                        data-aos-once="false"
                     >
                         <p
                             id="aboutHeading"
-                            className="text-center text-[250%] font-bold text-[#d3d0d0]
+                            className="text-center text-[250%] font-bold text-blue-600
                             mt-7 underline"
                         >
                             ABOUT
@@ -228,7 +217,7 @@ function App() {
                         <p
                             id="aboutContent"
                             className=" font-semibold text-center text-xl
-                            text-[#dbd3d3] w-[90%] "
+                            text-[#cecea5] w-[90%] "
                         >
                             Lorem ipsum, dolor sit amet consectetur adipisicing
                             elit. Officia ratione odio odit eius numquam ipsum
@@ -246,18 +235,21 @@ function App() {
 
                     <div
                         id="details1"
-                        className="mt-[30%] flex flex-col items-center opacity-0"
+                        className="mt-[30%] flex flex-col items-center"
+                        data-aos="fade-left"
+                        data-aos-duration="2000"
+                        data-aos-once="false"
                     >
                         <p
                             id="details1Heading"
-                            className=" text-[200%] text-center font-bold text-[#bcbcd6]"
+                            className=" text-[200%] text-center font-bold text-blue-600"
                         >
                             UI/UX Designer & Web Developer
                         </p>
 
                         <p
                             id="details1Intro"
-                            className="mt-5 mb-5 text-center italic font-semibold text-[#dbd3d3] text-xl w-[90%]"
+                            className="mt-5 mb-5 text-center italic font-semibold text-[#cecea5] text-xl w-[90%]"
                         >
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Doloremque eos saepe iusto, a vitae dolore.
@@ -267,34 +259,23 @@ function App() {
                         </p>
 
                         <ul className="text-[#dbd3d3] text-xl">
-                            <li className=" ml-6 text-lg">
-                                <span className=" font-extrabold">
-                                    Date of Birth:
-                                </span>{" "}
-                                10th October 2003
-                            </li>
-                            <li className=" ml-6 text-lg">
-                                <span className=" font-extrabold">City:</span>{" "}
-                                Ghaziabad
-                            </li>
-                            <li className=" ml-6 text-lg">
-                                <span className=" font-extrabold">Age: </span>20
-                            </li>
-                            <li className=" ml-6 text-lg">
-                                <span className=" font-extrabold">
-                                    Degree:{" "}
-                                </span>
-                                Bachelor of Technologoy (Pursuing)
-                            </li>
-                            <li className=" ml-6 text-lg">
-                                <span className=" font-extrabold">Email: </span>
-                                20031010.aman@gmail.com
-                            </li>
+                            {details.map((detail) => {
+                                return (
+                                    <li className=" ml-6 text-lg">
+                                        <span className=" font-extrabold text-[#e77272]">
+                                            {detail.detailType} :
+                                        </span>
+                                        <span className=" text-[#d9a2d9] ml-1">
+                                            {detail.detailValue}
+                                        </span>
+                                    </li>
+                                );
+                            })}
                         </ul>
 
                         <p
                             id="details1Outro"
-                            className="mt-5 text-center font-semibold text-[#dbd3d3] text-xl w-[90%]"
+                            className="mt-5 text-center font-semibold text-[#cecea5] text-xl w-[90%]"
                         >
                             Lorem ipsum dolor sit, amet consectetur adipisicing
                             elit. Voluptate voluptas sit veniam dolores, nisi
@@ -306,18 +287,21 @@ function App() {
 
                     <div
                         id="skills"
-                        className="mt-[30%] text-white flex flex-col justify-center opacity-0"
+                        className="mt-[30%] text-white flex flex-col justify-center "
+                        data-aos="fade-right"
+                        data-aos-duration="2000"
+                        data-aos-once="false"
                     >
                         <p
                             id="skillsHeading"
-                            className="text-[#d3d0d0] text-[250%] underline mb-5 self-center"
+                            className="text-blue-600 text-[250%] underline mb-5 self-center"
                         >
                             Skills
                         </p>
 
                         <p
                             id="skillsContent"
-                            className="w-[90%] text-xl text-center self-center text-[#d3d0d0]"
+                            className="w-[90%] text-xl text-center self-center text-[#cecea5]"
                         >
                             Lorem ipsum dolor sit amet, consectetur adipisicing
                             elit. Quia illum velit odio vitae porro doloremque
@@ -326,15 +310,22 @@ function App() {
                             asperiores.
                         </p>
 
-                        {skills.map((s) => (
+                        {skillMemo}
+                        {/* {skills.map((s) => (
                             <Skill
                                 skill={s.skill}
                                 percentage={"" + s.percentage}
                             />
-                        ))}
+                        ))} */}
                     </div>
 
-                    <div id="projects" className="text-white mt-[30%] opacity-0">
+                    <div
+                        id="projects"
+                        className="text-white mt-[30%] "
+                        data-aos="fade-left"
+                        data-aos-duration="2000"
+                        data-aos-once="false"
+                    >
                         <h1
                             id="PROJECTS"
                             className="text-4xl text-blue-600 text-center mb-10 font-bold underline "
@@ -351,14 +342,14 @@ function App() {
                                 >
                                     <p
                                         id={`Heading`}
-                                        className="text-2xl font-semibold mb-3 text-center underline"
+                                        className="text-2xl font-semibold mb-3 text-center underline text-[#e77272]"
                                     >
                                         {p.projectName}
                                     </p>
 
                                     <p
                                         id="project1Content"
-                                        className="w-[90%] text-center text-lg m-auto"
+                                        className="w-[90%] text-center text-lg m-auto text-[#cecea5]"
                                     >
                                         {p.projectContent}
                                     </p>
@@ -384,7 +375,13 @@ function App() {
                         })}
                     </div>
 
-                    <div id="services" className="text-white mt-[30%] opacity-0">
+                    <div
+                        id="services"
+                        className="text-white mt-[30%] "
+                        data-aos="fade-right"
+                        data-aos-duration="2000"
+                        data-aos-once="false"
+                    >
                         <h1
                             id="servicesHeading"
                             className="text-4xl text-center text-blue-500 underline mb-6 font-bold "
@@ -394,7 +391,7 @@ function App() {
 
                         <p
                             id="servicesContent"
-                            className="w-[90%] text-center text-lg ml-auto mr-auto mb-8"
+                            className="w-[90%] text-center text-lg ml-auto mr-auto mb-8 text-[#cecea5]"
                         >
                             Lorem ipsum dolor sit amet consectetur, adipisicing
                             elit. Quae id blanditiis et ad facilis quos dolorum
@@ -427,7 +424,13 @@ function App() {
                         })}
                     </div>
 
-                    <div id="contact" className="text-white mt-24 opacity-0">
+                    <div
+                        id="contact"
+                        className="text-white mt-24"
+                        data-aos="fade-left"
+                        data-aos-duration="2000"
+                        data-aos-once="false"
+                    >
                         <h1
                             id="contactHeading"
                             className="text-4xl text-blue-500 font-bold underline text-center mb-10"
@@ -439,14 +442,14 @@ function App() {
                                 return (
                                     <div
                                         id={`${c.contactType}`}
-                                        className="flex gap-3 items-center mb-6"
+                                        className="flex gap-3 items-center mb-6 w-[90%] ml-auto mr-auto"
                                     >
                                         <span>{c.contactSvg}</span>
                                         <p>
-                                            <p className="text-2xl font-semibold">
+                                            <p className="text-2xl font-semibold text-green-400">
                                                 {c.contactType}:
                                             </p>
-                                            <p className=" text-xl">
+                                            <p className=" text-xl text-red-500">
                                                 {c.contactContent}
                                             </p>
                                         </p>

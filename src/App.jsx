@@ -146,12 +146,12 @@ function App() {
 
     useEffect(() => {
         AOS.init();
-        window.scrollTo(0, 0);
+        // window.scrollTo(0, 0);
     }, []);
 
     return (
         <>
-            <div className=" h-screen w-screen p-0 m-0">
+            <div className=" h-screen w-screen p-0 m-0 relative">
                 <div className="h-full w-screen bg-[#212121] text-[white]">
                     <div
                         data-aos="fade-down"
@@ -242,7 +242,7 @@ function App() {
                     >
                         <p
                             id="details1Heading"
-                            className=" text-[200%] text-center font-bold text-blue-600"
+                            className=" text-[200%] text-center font-bold text-blue-600 underline"
                         >
                             UI/UX Designer & Web Developer
                         </p>
@@ -460,6 +460,7 @@ function App() {
                     </div>
                 </div>
             </div>
+
         </>
     );
 }

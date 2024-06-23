@@ -140,13 +140,44 @@ function App() {
         },
     ]);
 
-    const skillMemo = useMemo(()=> skills.map(s => {
-        return (<Skill skill={s.skill} percentage={"" + s.percentage} />)
-      }),[skills])
+    const skillMemo = useMemo(
+        () =>
+            skills.map((s) => {
+                return <Skill skill={s.skill} percentage={"" + s.percentage} />;
+            }),
+        [skills]
+    );
+
+    const handleScrollClick = (event) => {
+        event.preventDefault();
+        window.scroll({ top: 0, behavior: "smooth" });
+    };
+
+    const upRef = useRef()
 
     useEffect(() => {
         AOS.init();
-        // window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
+    }, []);
+
+    const handleScroll = (event) => {
+        console.log(window.scrollY);
+        console.log(upRef.current)
+
+        if(window.scrollY>0){
+            upRef.current.classList.remove("hidden");
+        }
+        else{
+            upRef.current.classList.add("hidden")
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
     }, []);
 
     return (
@@ -459,8 +490,27 @@ function App() {
                         </div>
                     </div>
                 </div>
-            </div>
 
+                <div
+                    className=" text-black fixed bottom-10 right-10 cursor-pointer hidden bg-green-300 p-3 rounded-lg hover:scale-105 duration-300 ease-in-out font-extrabold"
+                    id="upButton"
+                    onClick={handleScrollClick}
+                    ref={upRef}
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        class="size-8"
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            d="M11.47 2.47a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1-1.06 1.06l-2.47-2.47V21a.75.75 0 0 1-1.5 0V4.81L8.78 7.28a.75.75 0 0 1-1.06-1.06l3.75-3.75Z"
+                            clip-rule="evenodd"
+                        />
+                    </svg>
+                </div>
+            </div>
         </>
     );
 }

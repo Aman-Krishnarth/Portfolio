@@ -1,6 +1,8 @@
 function Skill({skill,percentage}) {   
 
     console.log("SKILL COMPONENT")
+
+    console.log()
     
     return (
         <>
@@ -10,7 +12,7 @@ function Skill({skill,percentage}) {
                 <span className=" font-bold text-base text-[white]">{percentage}%</span>
             </div>
             <div className="h-2 w-[90%] bg-[white] ml-auto mr-auto mb-4">
-                <div className={`h-2 w-[${percentage}%] bg-green-600`}></div>
+                <div className={`h-2 bg-green-600`} style={{width: `${percentage}%`}}></div>
             </div>
             
         </>

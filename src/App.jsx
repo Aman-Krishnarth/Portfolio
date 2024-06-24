@@ -5,6 +5,10 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 function App() {
+    const upRef = useRef();
+    const menuRef = useRef();
+    const projectDiv = useRef();
+
     const [text] = useTypewriter({
         words: ["Problem Solver", "Frontend Developer"],
         loop: 0,
@@ -15,27 +19,27 @@ function App() {
     const [skills, setSkills] = useState([
         {
             skill: "HTML",
-            percentage: 85,
+            percentage: "85",
         },
         {
             skill: "Tailwind",
-            percentage: 75,
+            percentage: "75",
         },
         {
             skill: "JavaScript",
-            percentage: 90,
+            percentage: "90",
         },
         {
             skill: "ReactJS",
-            percentage: 80,
+            percentage: "80",
         },
         {
             skill: "C++",
-            percentage: 75,
+            percentage: "75",
         },
         {
             skill: "Python",
-            percentage: 90,
+            percentage: "90",
         },
     ]);
 
@@ -143,7 +147,7 @@ function App() {
     const skillMemo = useMemo(
         () =>
             skills.map((s) => {
-                return <Skill skill={s.skill} percentage={"" + s.percentage} />;
+                return <Skill skill={s.skill} percentage={s.percentage} />;
             }),
         [skills]
     );
@@ -153,7 +157,16 @@ function App() {
         window.scroll({ top: 0, behavior: "smooth" });
     };
 
-    const upRef = useRef();
+    const handleCrossClick = () => {
+        menuRef.current.classList.add("hidden");
+    };
+
+    const handleSectionClick = () => {
+        menuRef.current.classList.add("hidden");
+        projectDiv.current.scrollIntoView({ behavior: "smooth" });
+    };
+
+    const handleMenuClick = () => {};
 
     useEffect(() => {
         AOS.init();
@@ -161,9 +174,6 @@ function App() {
     }, []);
 
     const handleScroll = (event) => {
-        console.log(window.scrollY);
-        console.log(upRef.current);
-
         if (window.scrollY > 0) {
             upRef.current.classList.remove("hidden");
             upRef.current.classList.add("animate-fadeIn");
@@ -183,6 +193,55 @@ function App() {
 
     return (
         <>
+            <div
+                className="h-lvh w-3/4 bg-[#827f7f] fixed top-0 z-10"
+                ref={menuRef}
+                onClick={handleMenuClick}
+            >
+                <div
+                    className=" text-black absolute right-2 top-2 cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out"
+                    onClick={handleCrossClick}
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        class="size-9"
+                        style={{ color: "orange" }}
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.72 6.97a.75.75 0 1 0-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06L12 13.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L13.06 12l1.72-1.72a.75.75 0 1 0-1.06-1.06L12 10.94l-1.72-1.72Z"
+                            clip-rule="evenodd"
+                        />
+                    </svg>
+                </div>
+
+                <div className=" h-full flex flex-col justify-center items-center">
+                    <div className=" text-blue-200 text-4xl underline w-3/4 text-center p-4">
+                        Home
+                    </div>
+                    <div className=" text-blue-200 text-4xl underline w-3/4 text-center p-4">
+                        Details
+                    </div>
+                    <div className=" text-blue-200 text-4xl underline w-3/4 text-center p-4">
+                        Skills
+                    </div>
+                    <div
+                        className=" text-blue-200 text-4xl underline w-3/4 text-center p-4 cursor-pointer"
+                        onClick={handleSectionClick}
+                    >
+                        Projects
+                    </div>
+                    <div className=" text-blue-200 text-4xl underline w-3/4 text-center p-4">
+                        Services
+                    </div>
+                    <div className=" text-blue-200 text-4xl underline w-3/4 text-center p-4">
+                        Contact
+                    </div>
+                </div>
+            </div>
+
             <div className=" h-lvh w-auto bg-[#212121] text-[white]">
                 <div
                     data-aos="fade-down"
@@ -237,7 +296,7 @@ function App() {
                     <p
                         id="aboutHeading"
                         className="text-center text-5xl font-bold text-blue-600
-                            mt-7 underline"
+                        mt-7 underline"
                     >
                         ABOUT
                     </p>
@@ -245,7 +304,7 @@ function App() {
                     <p
                         id="aboutContent"
                         className=" font-semibold text-center text-xl
-                            text-[#cecea5] w-[90%] "
+                        text-[#cecea5] w-[90%] "
                     >
                         Lorem ipsum, dolor sit amet consectetur adipisicing
                         elit. Officia ratione odio odit eius numquam ipsum
@@ -344,6 +403,7 @@ function App() {
                     data-aos="fade-right"
                     data-aos-duration="2000"
                     data-aos-once="false"
+                    ref={projectDiv}
                 >
                     <h1
                         id="PROJECTS"
@@ -453,7 +513,7 @@ function App() {
                     >
                         Contact
                     </h1>
-                    <div id="contacts" className="ml-4">
+                    <div id="contacts" className=" pb-8">
                         {contact.map((c) => {
                             return (
                                 <div

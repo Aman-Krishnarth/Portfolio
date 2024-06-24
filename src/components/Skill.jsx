@@ -9,8 +9,8 @@ function Skill({skill,percentage}) {
                 <span className=" font-bold text-base text-[#e77272]">{skill}</span>
                 <span className=" font-bold text-base text-[white]">{percentage}%</span>
             </div>
-            <div className="h-2 w-[90%] bg-[white] ml-4 mb-4">
-                <div className={`h-full w-[90%] bg-blue-600`}></div>
+            <div className="h-2 w-[90%] bg-[white] ml-auto mr-auto mb-4">
+                <div className={`h-2 w-[${percentage}%] bg-green-600`}></div>
             </div>
             
         </>

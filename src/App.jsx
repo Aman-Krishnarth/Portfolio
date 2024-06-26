@@ -7,7 +7,13 @@ import "aos/dist/aos.css";
 function App() {
     const upRef = useRef();
     const menuRef = useRef();
+    const aboutDivRef = useRef();
+    const detailsDivRef = useRef();
+    const skillsDivRef = useRef();
     const projectDiv = useRef();
+    const servicesDivRef = useRef();
+    const contactDivRef = useRef();
+    const menuButton = useRef();
 
     const [text] = useTypewriter({
         words: ["Problem Solver", "Frontend Developer"],
@@ -144,6 +150,15 @@ function App() {
         },
     ]);
 
+    const [menuButtons, setMenuButtons] = useState([
+        "Home",
+        "Details",
+        "Skills",
+        "Projects",
+        "Services",
+        "Contact",
+    ]);
+
     const skillMemo = useMemo(
         () =>
             skills.map((s) => {
@@ -152,6 +167,25 @@ function App() {
         [skills]
     );
 
+    window.addEventListener("click", (event) => {
+        if (menuRef.current?.classList.contains("hidden")) {
+            console.log("nahi hai");
+        } else {
+            menuRef.current.classList.add("hidden");
+            console.log("hai");
+        }
+        
+        if (menuButton.current?.classList.contains("hidden")) {
+            menuButton.current.classList.remove("hidden")
+            console.log("nahi hai");
+        } else {
+            
+            console.log("hai");
+        }
+        
+
+    });
+
     const handleScrollClick = (event) => {
         event.preventDefault();
         window.scroll({ top: 0, behavior: "smooth" });
@@ -159,14 +193,32 @@ function App() {
 
     const handleCrossClick = () => {
         menuRef.current.classList.add("hidden");
+        menuButton.current.classList.remove("hidden")
+
     };
 
-    const handleSectionClick = () => {
+    const handleSectionClick = (event) => {
         menuRef.current.classList.add("hidden");
-        projectDiv.current.scrollIntoView({ behavior: "smooth" });
+        menuButton.current.classList.remove("hidden");
+
+        if (event.target.textContent === "Home") {
+            aboutDivRef.current.scrollIntoView({ behavior: "smooth" });
+        } else if (event.target.textContent === "Details") {
+            detailsDivRef.current.scrollIntoView({ behavior: "smooth" });
+        } else if (event.target.textContent === "Skills") {
+            skillsDivRef.current.scrollIntoView({ behavior: "smooth" });
+        } else if (event.target.textContent === "Projects") {
+            projectDiv.current.scrollIntoView({ behavior: "smooth" });
+        } else if (event.target.textContent === "Services") {
+            servicesDivRef.current.scrollIntoView({ behavior: "smooth" });
+        } else if (event.target.textContent === "Contact") {
+            contactDivRef.current.scrollIntoView({ behavior: "smooth" });
+        }
     };
 
-    const handleMenuClick = () => {};
+    const handleMenuClick = (event) => {
+        event.stopPropagation();
+    };
 
     useEffect(() => {
         AOS.init();
@@ -191,10 +243,24 @@ function App() {
         };
     }, []);
 
+    const handleMenuButtonClick = (event) => {
+        event.stopPropagation()
+        menuRef.current.classList.remove("hidden");
+        menuButton.current.classList.add("hidden")
+    };
+
     return (
         <>
             <div
-                className="h-lvh w-3/4 bg-[#827f7f] fixed top-0 z-10"
+                className="bg-white fixed top-10 right-10 cursor-pointer"
+                onClick={handleMenuButtonClick}
+                ref={menuButton}
+            >
+                Menu
+            </div>
+
+            <div
+                className="h-lvh w-3/4 bg-[#827f7f] fixed top-0 z-10 hidden"
                 ref={menuRef}
                 onClick={handleMenuClick}
             >
@@ -218,27 +284,18 @@ function App() {
                 </div>
 
                 <div className=" h-full flex flex-col justify-center items-center">
-                    <div className=" text-blue-200 text-4xl underline w-3/4 text-center p-4">
-                        Home
-                    </div>
-                    <div className=" text-blue-200 text-4xl underline w-3/4 text-center p-4">
-                        Details
-                    </div>
-                    <div className=" text-blue-200 text-4xl underline w-3/4 text-center p-4">
-                        Skills
-                    </div>
-                    <div
-                        className=" text-blue-200 text-4xl underline w-3/4 text-center p-4 cursor-pointer"
-                        onClick={handleSectionClick}
-                    >
-                        Projects
-                    </div>
-                    <div className=" text-blue-200 text-4xl underline w-3/4 text-center p-4">
-                        Services
-                    </div>
-                    <div className=" text-blue-200 text-4xl underline w-3/4 text-center p-4">
-                        Contact
-                    </div>
+                    {menuButtons.map((value) => {
+                        return (
+                            <div className=" text-blue-200 text-4xl underline w-3/4 text-center p-4">
+                                <span
+                                    className="cursor-pointer"
+                                    onClick={handleSectionClick}
+                                >
+                                    {value}
+                                </span>
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
 
@@ -292,6 +349,7 @@ function App() {
                     data-aos-duration="2000"
                     data-aos-delay="500"
                     data-aos-once="false"
+                    ref={aboutDivRef}
                 >
                     <p
                         id="aboutHeading"
@@ -326,6 +384,7 @@ function App() {
                     data-aos="fade-right"
                     data-aos-duration="2000"
                     data-aos-once="false"
+                    ref={detailsDivRef}
                 >
                     <p
                         id="details1Heading"
@@ -377,6 +436,7 @@ function App() {
                     data-aos="fade-right"
                     data-aos-duration="2000"
                     data-aos-once="false"
+                    ref={skillsDivRef}
                 >
                     <p
                         id="skillsHeading"
@@ -457,6 +517,7 @@ function App() {
                     data-aos="fade-right"
                     data-aos-duration="2000"
                     data-aos-once="false"
+                    ref={servicesDivRef}
                 >
                     <h1
                         id="servicesHeading"
@@ -506,6 +567,7 @@ function App() {
                     data-aos="fade-right"
                     data-aos-duration="2000"
                     data-aos-once="false"
+                    ref={contactDivRef}
                 >
                     <h1
                         id="contactHeading"

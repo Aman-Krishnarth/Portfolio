@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { memo, useEffect, useMemo, useRef, useState } from "react";
 import { useTypewriter, Typewriter, Cursor } from "react-simple-typewriter";
 import Skill from "./components/Skill";
 import AOS from "aos";
@@ -54,25 +54,25 @@ function App() {
             projectNumber: "1",
             projectName: "2048 Game",
             projectContent:
-                "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi commodi labore hic reprehenderit quas ratione illo eligendi soluta tenetur! Dignissimos tenetur maiores totam. Aliquid, minima sunt nihil molestiae accusantium dicta!",
+                "Dive into my rendition of the classic 2048 game, meticulously crafted using HTML, CSS, and JavaScript. This project showcases my proficiency in front-end development, where I combined intuitive user interface design with responsive layout techniques to recreate a popular puzzle game. From implementing game logic to enhancing user interactions, every aspect of this project reflects my passion for creating engaging and functional web experiences. Explore how I leveraged my skills in HTML for structure, CSS for styling, and JavaScript for dynamic gameplay to deliver a captivating digital game that challenges and entertains users alike.",
             projectLiveLink: "https://aman-krishnarth.github.io/2048/",
-            projectGithub: "",
+            projectGithub: "https://github.com/Aman-Krishnarth/2048",
         },
         {
             projectNumber: "2",
             projectName: "Suodku Game",
             projectContent:
-                "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi commodi labore hic reprehenderit quas ratione illo eligendi soluta tenetur! Dignissimos tenetur maiores totam. Aliquid, minima sunt nihil molestiae accusantium dicta!",
+                "Explore my interactive Sudoku game built from scratch using HTML, CSS, and JavaScript. This project demonstrates my expertise in front-end development, where I meticulously designed a responsive and intuitive user interface for a classic puzzle game. From implementing the game logic to ensuring smooth user interactions, every detail has been crafted to provide a seamless gaming experience. Dive into this project to see how I utilized HTML for structure, CSS for styling and layout, and JavaScript for dynamic functionality, offering players a challenging yet enjoyable way to engage with puzzles online.",
             projectLiveLink: "https://aman-krishnarth.github.io/SudokuGame/",
-            projectGithub: "",
+            projectGithub: "https://github.com/Aman-Krishnarth/SudokuGame",
         },
         {
             projectNumber: "3",
             projectName: "Weather App",
             projectContent:
-                "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi commodi labore hic reprehenderit quas ratione illo eligendi soluta tenetur! Dignissimos tenetur maiores totam. Aliquid, minima sunt nihil molestiae accusantium dicta!",
+                "Discover my weather app created with React, showcasing my proficiency in modern front-end development. This project integrates real-time weather data from a third-party API, offering users an intuitive interface to check current weather conditions and forecasts. Leveraging React's component-based architecture, I designed a responsive and interactive app that dynamically updates information based on user inputs. From fetching data asynchronously to handling state management efficiently, every aspect of this project reflects my commitment to delivering seamless and engaging user experiences. Explore how I combined React with CSS for styling and Axios for data fetching to develop a robust weather app that keeps users informed with accurate and visually appealing weather updates.",
             projectLiveLink: "https://aman-krishnarth.github.io/WeatherApp/",
-            projectGithub: "",
+            projectGithub: "https://github.com/Aman-Krishnarth/WeatherApp",
         },
     ]);
 
@@ -81,13 +81,13 @@ function App() {
             serviceNumber: 1,
             serviceName: "Web Development",
             serviceContent:
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, commodi.",
+                "I specialize in providing comprehensive web development services aimed at transforming your ideas into compelling digital solutions. Whether you're launching a new website, revamping an existing one, or seeking to develop a custom web application, I offer expertise in front-end and back-end development to meet your specific needs. From responsive design that ensures optimal viewing across devices to implementing robust functionality using modern technologies such as HTML5, CSS3, JavaScript, and frameworks like React and Node.js, I deliver solutions that are not only visually appealing but also user-friendly and scalable. Let's collaborate to create websites and applications that resonate with your audience and drive meaningful engagement and results.",
         },
         {
             serviceNumber: 2,
             serviceName: "Problem Solver",
             serviceContent:
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, commodi.",
+                "Problem-solving is at the core of my service offerings, aimed at tackling your most challenging digital hurdles effectively. Whether you're facing performance issues with your current website, seeking to enhance user engagement through intuitive design improvements, or needing custom solutions to automate processes and boost efficiency, I bring a proactive approach and technical expertise to the table. With a deep understanding of web development best practices and a knack for troubleshooting and innovation, I specialize in diagnosing issues, proposing strategic solutions, and implementing them efficiently. Let's work together to identify and resolve your digital challenges, ensuring your online presence not only meets but exceeds your expectations.",
         },
     ]);
 
@@ -174,16 +174,13 @@ function App() {
             menuRef.current.classList.add("hidden");
             console.log("hai");
         }
-        
+
         if (menuButton.current?.classList.contains("hidden")) {
-            menuButton.current.classList.remove("hidden")
+            menuButton.current.classList.remove("hidden");
             console.log("nahi hai");
         } else {
-            
             console.log("hai");
         }
-        
-
     });
 
     const handleScrollClick = (event) => {
@@ -193,8 +190,7 @@ function App() {
 
     const handleCrossClick = () => {
         menuRef.current.classList.add("hidden");
-        menuButton.current.classList.remove("hidden")
-
+        menuButton.current.classList.remove("hidden");
     };
 
     const handleSectionClick = (event) => {
@@ -244,23 +240,35 @@ function App() {
     }, []);
 
     const handleMenuButtonClick = (event) => {
-        event.stopPropagation()
+        event.stopPropagation();
         menuRef.current.classList.remove("hidden");
-        menuButton.current.classList.add("hidden")
+        menuButton.current.classList.add("hidden");
     };
 
     return (
         <>
             <div
-                className="bg-white fixed top-10 right-10 cursor-pointer"
+                className="fixed top-7 right-10 cursor-pointer "
                 onClick={handleMenuButtonClick}
                 ref={menuButton}
             >
-                Menu
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="size-9"
+                    style={{ color: "white" }}
+                >
+                    <path
+                        fill-rule="evenodd"
+                        d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
+                        clip-rule="evenodd"
+                    />
+                </svg>
             </div>
 
             <div
-                className="h-lvh w-3/4 bg-[#827f7f] fixed top-0 z-10 hidden"
+                className="h-lvh w-3/4 bg-[#827f7f] fixed top-0 z-10 hidden "
                 ref={menuRef}
                 onClick={handleMenuClick}
             >
@@ -361,20 +369,16 @@ function App() {
 
                     <p
                         id="aboutContent"
-                        className=" font-semibold text-center text-xl
+                        className=" font-semibold text-center text-2xl
                         text-[#cecea5] w-[90%] "
                     >
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Officia ratione odio odit eius numquam ipsum
-                        deserunt corporis, ut eos provident neque rem hic
-                        reiciendis earum magni culpa non assumenda animi
-                        incidunt aliquam dolorem aut iste, distinctio quo?
-                        Placeat sapiente debitis, doloribus recusandae,
-                        excepturi maxime quod dolor facere molestiae eius cum
-                        consectetur repudiandae, molestias illum dicta
-                        voluptates ipsam id similique necessitatibus alias
-                        dolores. Quae provident earum nisi explicabo iure, fuga
-                        facere?
+                        Greetings! I'm Aman Krishnarth, a dedicated web
+                        developer with a passion for crafting engaging digital
+                        experiences. I specialize in creating responsive and
+                        user-centric websites. My journey is fueled by a
+                        commitment to innovation and a drive to deliver
+                        impactful solutions. Let's connect and create something
+                        remarkable together!
                     </p>
                 </div>
 
@@ -388,22 +392,22 @@ function App() {
                 >
                     <p
                         id="details1Heading"
-                        className=" text-4xl text-center font-bold text-blue-600 underline"
+                        className=" text-5xl text-center font-bold text-blue-600 underline"
                     >
                         UI/UX Designer & Web Developer
                     </p>
 
                     <p
                         id="details1Intro"
-                        className="mt-5 mb-5 text-center italic font-semibold text-[#cecea5] text-xl w-[90%]"
+                        className="mt-5 mb-5 text-center italic font-semibold text-[#cecea5] text-2xl w-[90%]"
                     >
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Doloremque eos saepe iusto, a vitae dolore. Inventore
-                        laudantium distinctio animi ipsa, quas ullam commodi
-                        nihil ratione nostrum sit quos cupiditate eveniet.
+                        Passionate about crafting seamless and visually striking
+                        digital experiences, I specialize in transforming
+                        concepts into functional and aesthetically pleasing
+                        websites.
                     </p>
 
-                    <ul className="text-[#dbd3d3] text-xl">
+                    <ul className="text-[#dbd3d3] text-2xl">
                         {details.map((detail) => {
                             return (
                                 <li className=" ml-6 text-lg">
@@ -422,11 +426,11 @@ function App() {
                         id="details1Outro"
                         className="mt-5 text-center font-semibold text-[#cecea5] text-xl w-[90%]"
                     >
-                        Lorem ipsum dolor sit, amet consectetur adipisicing
-                        elit. Voluptate voluptas sit veniam dolores, nisi alias
-                        porro perspiciatis optio quia voluptates id officia
-                        eligendi dignissimos accusantium modi nam quaerat
-                        quidem. Voluptas?
+                        Beyond the screen, you might catch me exploring the
+                        latest tech trends, attending meetups, or diving into a
+                        new coding challenge. I'm always up for connecting with
+                        fellow tech enthusiasts, so let's chat about all things
+                        code!
                     </p>
                 </div>
 
@@ -440,19 +444,24 @@ function App() {
                 >
                     <p
                         id="skillsHeading"
-                        className="text-blue-600 text-4xl underline mb-5 self-center"
+                        className="text-blue-600 text-5xl underline mb-5 self-center"
                     >
                         Skills
                     </p>
 
                     <p
                         id="skillsContent"
-                        className="w-[90%] text-xl text-center self-center text-[#cecea5]"
+                        className="w-[90%] text-2xl text-center self-center text-[#cecea5] mb-5"
                     >
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Quia illum velit odio vitae porro doloremque vero,
-                        fugit odit magnam consequuntur sunt dolores? Tenetur
-                        inventore rerum commodi totam nesciunt sit asperiores.
+                        I possess a diverse skill set encompassing both UI/UX
+                        design and web development. With proficiency in HTML,
+                        CSS, JavaScript, and frameworks like React, for
+                        designing captivating user interfaces, I excel in
+                        creating seamless digital experiences. My approach
+                        integrates user-centered design principles with
+                        technical acumen, enabling me to craft intuitive
+                        interfaces that elevate user engagement and
+                        satisfaction.
                     </p>
                     {skillMemo}
                 </div>
@@ -467,7 +476,7 @@ function App() {
                 >
                     <h1
                         id="PROJECTS"
-                        className="text-4xl text-blue-600 text-center mb-10 font-bold underline "
+                        className="text-5xl text-blue-600 text-center mb-10 font-bold underline "
                     >
                         PROJECTS
                     </h1>
@@ -488,7 +497,7 @@ function App() {
 
                                 <p
                                     id="project1Content"
-                                    className="w-[90%] text-center text-lg m-auto text-[#cecea5]"
+                                    className="w-[90%] text-center text-xl m-auto text-[#cecea5]"
                                 >
                                     {p.projectContent}
                                 </p>
@@ -521,20 +530,30 @@ function App() {
                 >
                     <h1
                         id="servicesHeading"
-                        className="text-4xl text-center text-blue-500 underline mb-6 font-bold "
+                        className="text-5xl text-center text-blue-500 underline mb-6 font-bold "
                     >
                         Services
                     </h1>
 
                     <p
                         id="servicesContent"
-                        className="w-[90%] text-center text-lg ml-auto mr-auto mb-8 text-[#cecea5]"
+                        className="w-[90%] text-center text-2xl ml-auto mr-auto mb-8 text-[#cecea5]"
                     >
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Quae id blanditiis et ad facilis quos dolorum iure
-                        iste vel! Necessitatibus quasi, nemo laborum culpa
-                        reprehenderit excepturi illo asperiores maiores
-                        voluptates?
+                        As a web developer, I offer a range of services tailored
+                        to bring your digital vision to life. Whether you're
+                        looking to establish a strong online presence, optimize
+                        existing websites for performance and usability, or
+                        create custom web applications from scratch, I'm here to
+                        help. My expertise spans front-end development using
+                        HTML, CSS, and JavaScript frameworks like React and
+                        Vue.js, as well as back-end development with Node.js and
+                        Express. I specialize in responsive design, ensuring
+                        your website looks great on any device, and I emphasize
+                        clean, efficient code that adheres to best practices for
+                        security and scalability. Let's collaborate to build
+                        websites and applications that not only meet your
+                        objectives but exceed expectations in both functionality
+                        and user experience.
                     </p>
 
                     {services.map((s) => {
@@ -552,7 +571,7 @@ function App() {
                                 </h2>
                                 <p
                                     id="service1Content"
-                                    className="w-[90%] text-center ml-auto mr-auto"
+                                    className="w-[90%] text-center ml-auto mr-auto text-xl"
                                 >
                                     {s.serviceContent}
                                 </p>
@@ -563,7 +582,7 @@ function App() {
 
                 <div
                     id="contact"
-                    className="text-white mt-28"
+                    className="text-white mt-28 bg-[#212121] p-6"
                     data-aos="fade-right"
                     data-aos-duration="2000"
                     data-aos-once="false"
@@ -571,11 +590,11 @@ function App() {
                 >
                     <h1
                         id="contactHeading"
-                        className="text-4xl text-blue-500 font-bold underline text-center mb-10"
+                        className="text-4xl text-blue-500 font-bold underline text-center mb-5"
                     >
                         Contact
                     </h1>
-                    <div id="contacts" className=" pb-8">
+                    <div id="contacts" className="">
                         {contact.map((c) => {
                             return (
                                 <div

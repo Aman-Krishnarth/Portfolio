@@ -1,0 +1,37 @@
+[
+  {
+    "title": "HTML",
+    "imageUrl": "https://imgs.search.brave.com/KIMjB0eK1Q60ysuc9PhEWrJ5ycfh3siH6mPUXZ_ZrnY/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi82LzYxL0hU/TUw1X2xvZ29fYW5k/X3dvcmRtYXJrLnN2/Zy82NDBweC1IVE1M/NV9sb2dvX2FuZF93/b3JkbWFyay5zdmcu/cG5n",
+    "proficiency": "70%"
+  },
+  {
+    "title": "Tailwind CSS",
+    "imageUrl": "https://imgs.search.brave.com/60rV0Keugghen4UoTpA7gnGy897m_sIHzchRGRaj58c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9sb2dv/d2lrLmNvbS9jb250/ZW50L3VwbG9hZHMv/aW1hZ2VzL3RhaWx3/aW5kLWNzczMyMzIu/bG9nb3dpay5jb20u/d2VicA",
+    "proficiency": "80%"
+  },
+  {
+    "title": "JavaScript",
+    "imageUrl": "https://imgs.search.brave.com/MgrQYfK1GHweRrENvGuXMcpCg83bGbG72QmGE5yx3ys/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy82/LzZhL0phdmFTY3Jp/cHQtbG9nby5wbmc",
+    "proficiency": "75%"
+  },
+  {
+    "title": "React JS",
+    "imageUrl": "https://imgs.search.brave.com/-wRYfmc8MFTE9dYoFBioZSxfu45QaJyuKfJ3h68gZGM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG40/Lmljb25maW5kZXIu/Y29tL2RhdGEvaWNv/bnMvbG9nb3MtMy82/MDAvUmVhY3QuanNf/bG9nby01MTIucG5n",
+    "proficiency": "80%"
+  },
+  {
+    "title": "MongoDB",
+    "imageUrl": "https://imgs.search.brave.com/p4RJFKwQmvT3C_tCo5tsX3BeZbAOCUZyCYIF5NttNU0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wbHVz/cG5nLmNvbS9pbWct/cG5nL2xvZ28tbW9u/Z29kYi1wbmctbW9u/Z29kYi1sb2dvLWFu/eXRoaW5nLWJ1dC10/aGUtc2ltcGxlc3Qt/b2Ytd2ViLWFwcGxp/Y2F0aW9ucy1yZXF1/aXJlcy1hLWRhdGFi/YXNlLXRvLXN0b3Jl/LWFuZC1zZXJ2ZS1j/b250ZW50LWZyb20t/Y2hvb3NpbmctdGhl/LXJpZ2h0LWRhdGFi/YXNlLWFuZC1zdHJ1/Y3R1cmluZy00MTMu/cG5n",
+    "proficiency": "60%"
+  },
+  {
+    "title": "Node JS",
+    "imageUrl": "https://imgs.search.brave.com/oaFGRaXb0-VRGAPDF1uzUObZzwpW4QdclW4QfTKVzE4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zZWVr/dmVjdG9ycy5jb20v/c3RvcmFnZS9pbWFn/ZXMvbm9kZSUyMGpz/JTIwbG9nby5zdmc",
+    "proficiency": "70%"
+  },
+  {
+    "title": "CPP",
+    "imageUrl": "https://imgs.search.brave.com/TC4R7mLgjO2ZPOLBKROQsPlt-c2NQWhwb6gp_QwdyOo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy8x/LzE4L0lTT19DKytf/TG9nby5zdmc",
+    "proficiency": "75%"
+  }
+]

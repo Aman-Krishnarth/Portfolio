@@ -5,13 +5,13 @@ function Skills() {
   return (
     <section id="skills" className=" text-white">
       <h2 className="text-white text-4xl tracking-widest font-bold mb-7 text-center">
-        ABOUT
+        SKILLS
       </h2>
 
       <div className=" grid md:grid-cols-2 lg:grid-cols-3 items-center justify-center gap-4 p-4">
         {skills.map((skill, id) => {
           return (
-            <div className="bg-[#212121] grid grid-rows-[1fr_auto] w-full md:w-3/4 rounded-xl m-auto">
+            <div className="bg-[#0c4891] grid grid-rows-[1fr_auto] w-full md:w-3/4 rounded-xl m-auto" key={id}>
               <div className="h-56 w-3/4 m-auto p-3">
                 <img
                   src={skill.imageUrl}

@@ -1,0 +1,82 @@
+[
+  {
+    "title": "Project A",
+    "imageSrc": "https://imgs.search.brave.com/42flTzuOeEnVUP3anL_RFL1nL0PDI4fPWFfkVEx6F64/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvZmVhdHVy/ZWQva3JhdG9zLXBp/Y3R1cmVzLTRhaXdy/eWZ1Yng3cGRoZ2Eu/anBn",
+    "description": "This is a project made to learn the latest languages by building an app.",
+    "skills": ["React", "Express", "Node"],
+    "demo": "https://www.example.com",
+    "source": "https://www.github.com"
+  },
+  {
+    "title": "Project B",
+    "imageSrc": "https://imgs.search.brave.com/42flTzuOeEnVUP3anL_RFL1nL0PDI4fPWFfkVEx6F64/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvZmVhdHVy/ZWQva3JhdG9zLXBp/Y3R1cmVzLTRhaXdy/eWZ1Yng3cGRoZ2Eu/anBn",
+    "description": "This is a project made to learn the latest languages by building an app.",
+    "skills": ["React", "Express", "Node", "Sass"],
+    "demo": "https://www.example.com",
+    "source": "https://www.github.com"
+  },
+  {
+    "title": "Project C",
+    "imageSrc": "https://imgs.search.brave.com/42flTzuOeEnVUP3anL_RFL1nL0PDI4fPWFfkVEx6F64/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvZmVhdHVy/ZWQva3JhdG9zLXBp/Y3R1cmVzLTRhaXdy/eWZ1Yng3cGRoZ2Eu/anBn",
+    "description": "This is a project made to learn the latest languages by building an app.",
+    "skills": ["React", "Express", "Node"],
+    "demo": "https://www.example.com",
+    "source": "https://www.github.com"
+  },
+  {
+    "title": "Project C",
+    "imageSrc": "https://imgs.search.brave.com/42flTzuOeEnVUP3anL_RFL1nL0PDI4fPWFfkVEx6F64/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvZmVhdHVy/ZWQva3JhdG9zLXBp/Y3R1cmVzLTRhaXdy/eWZ1Yng3cGRoZ2Eu/anBn",
+    "description": "This is a project made to learn the latest languages by building an app.",
+    "skills": ["React", "Express", "Node"],
+    "demo": "https://www.example.com",
+    "source": "https://www.github.com"
+  },
+  {
+    "title": "Project C",
+    "imageSrc": "https://imgs.search.brave.com/42flTzuOeEnVUP3anL_RFL1nL0PDI4fPWFfkVEx6F64/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvZmVhdHVy/ZWQva3JhdG9zLXBp/Y3R1cmVzLTRhaXdy/eWZ1Yng3cGRoZ2Eu/anBn",
+    "description": "This is a project made to learn the latest languages by building an app.",
+    "skills": ["React", "Express", "Node"],
+    "demo": "https://www.example.com",
+    "source": "https://www.github.com"
+  },
+  {
+    "title": "Project C",
+    "imageSrc": "https://imgs.search.brave.com/42flTzuOeEnVUP3anL_RFL1nL0PDI4fPWFfkVEx6F64/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvZmVhdHVy/ZWQva3JhdG9zLXBp/Y3R1cmVzLTRhaXdy/eWZ1Yng3cGRoZ2Eu/anBn",
+    "description": "This is a project made to learn the latest languages by building an app.",
+    "skills": ["React", "Express", "Node"],
+    "demo": "https://www.example.com",
+    "source": "https://www.github.com"
+  },
+  {
+    "title": "Project C",
+    "imageSrc": "https://imgs.search.brave.com/42flTzuOeEnVUP3anL_RFL1nL0PDI4fPWFfkVEx6F64/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvZmVhdHVy/ZWQva3JhdG9zLXBp/Y3R1cmVzLTRhaXdy/eWZ1Yng3cGRoZ2Eu/anBn",
+    "description": "This is a project made to learn the latest languages by building an app.",
+    "skills": ["React", "Express", "Node"],
+    "demo": "https://www.example.com",
+    "source": "https://www.github.com"
+  },
+  {
+    "title": "Project C",
+    "imageSrc": "https://imgs.search.brave.com/42flTzuOeEnVUP3anL_RFL1nL0PDI4fPWFfkVEx6F64/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvZmVhdHVy/ZWQva3JhdG9zLXBp/Y3R1cmVzLTRhaXdy/eWZ1Yng3cGRoZ2Eu/anBn",
+    "description": "This is a project made to learn the latest languages by building an app.",
+    "skills": ["React", "Express", "Node"],
+    "demo": "https://www.example.com",
+    "source": "https://www.github.com"
+  },
+  {
+    "title": "Project C",
+    "imageSrc": "https://imgs.search.brave.com/42flTzuOeEnVUP3anL_RFL1nL0PDI4fPWFfkVEx6F64/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvZmVhdHVy/ZWQva3JhdG9zLXBp/Y3R1cmVzLTRhaXdy/eWZ1Yng3cGRoZ2Eu/anBn",
+    "description": "This is a project made to learn the latest languages by building an app.",
+    "skills": ["React", "Express", "Node"],
+    "demo": "https://www.example.com",
+    "source": "https://www.github.com"
+  },
+  {
+    "title": "Project C",
+    "imageSrc": "https://imgs.search.brave.com/42flTzuOeEnVUP3anL_RFL1nL0PDI4fPWFfkVEx6F64/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvZmVhdHVy/ZWQva3JhdG9zLXBp/Y3R1cmVzLTRhaXdy/eWZ1Yng3cGRoZ2Eu/anBn",
+    "description": "This is a project made to learn the latest languages by building an app.",
+    "skills": ["React", "Express", "Node"],
+    "demo": "https://www.example.com",
+    "source": "https://www.github.com"
+  }
+]

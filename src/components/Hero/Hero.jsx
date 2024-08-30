@@ -20,7 +20,7 @@ function Hero() {
           like to learn more!
         </p>
         <a
-          href="#mailto:20031010.aman@gmail.com"
+          href="mailto:20031010.aman@gmail.com"
           className=" no-underline bg-[#576cbc] text-white rounded-[100px] text-3xl font-semibold py-4 px-6 m-auto"
         >
           Contact me

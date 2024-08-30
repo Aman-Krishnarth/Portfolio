@@ -14,9 +14,7 @@ function ProjectCard({ project, id }) {
         </div>
         <h3 className=" text-3xl font-bold">{project.title}</h3>
 
-        <p className=" mt-1 text-2xl font-normal">
-          {project.description}
-        </p>
+        <p className=" mt-1 text-2xl font-normal">{project.description}</p>
 
         <ul className=" w-full mt-4 flex flex-wrap gap-6">
           {project.skills.map((skill, id) => {
@@ -35,12 +33,14 @@ function ProjectCard({ project, id }) {
           <a
             href={project.demo}
             className="link text-white text-3xl bg-[#576cbc] py-1 px-5 font-medium rounded-full"
+            target="_blank"
           >
             Demo
           </a>
           <a
             href={project.source}
             className="link text-white text-3xl bg-[#576cbc] py-1 px-5 font-medium rounded-full"
+            target="_blank"
           >
             Source
           </a>

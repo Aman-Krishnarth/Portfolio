@@ -20,9 +20,19 @@ function Contact() {
           return (
             <li className="flex items-center gap-4 w-full" key={id}>
               <div className="h-12 w-12">
-                <img src={contact.imgUrl} alt="" className="h-full w-full hover:scale-110 duration-300 ease-in-out" />
+                <img
+                  src={contact.imgUrl}
+                  alt=""
+                  className="h-full w-full hover:scale-110 duration-300 ease-in-out"
+                />
               </div>
-              <a href={contact.link} className="text-white text-3xl font-semibold hover:underline">{contact.text}</a>
+              <a
+                href={contact.link}
+                className="text-white text-3xl font-semibold hover:underline"
+                target="_blank"
+                >
+                {contact.text}
+              </a>
             </li>
           );
         })}

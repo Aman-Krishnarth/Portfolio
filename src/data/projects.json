@@ -1,82 +1,42 @@
 [
   {
-    "title": "Project A",
-    "imageSrc": "https://imgs.search.brave.com/42flTzuOeEnVUP3anL_RFL1nL0PDI4fPWFfkVEx6F64/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvZmVhdHVy/ZWQva3JhdG9zLXBp/Y3R1cmVzLTRhaXdy/eWZ1Yng3cGRoZ2Eu/anBn",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["React", "Express", "Node"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "title": "Typing Speed App",
+    "imageSrc": "https://imgs.search.brave.com/Saj9VErmYIr4J5RivP5nA9D8i4fNnSnABJbB1dFWDI4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtcGxhdGZvcm0u/OTlzdGF0aWMuY29t/Ly9kSDdaNTRNR0Rl/ZU8wak5ZV2NZN0pX/YXluazg9LzB4MDoy/MDAxeDIwMDEvZml0/LWluLzUwMHg1MDAv/OTlkZXNpZ25zLWNv/bnRlc3RzLWF0dGFj/aG1lbnRzLzcwLzcw/NzA5L2F0dGFjaG1l/bnRfNzA3MDk2MjM",
+    "description": "A MERN stack typing speed app delivers real-time typing tests with a responsive and interactive interface.",
+    "skills": ["MongoDB", "Express", "React", "Node", "TailwindCSS"],
+    "demo": "https://typing-speed-app-frontend.onrender.com/",
+    "source": "https://github.com/Aman-Krishnarth/Typing-Speed-App"
   },
   {
-    "title": "Project B",
-    "imageSrc": "https://imgs.search.brave.com/42flTzuOeEnVUP3anL_RFL1nL0PDI4fPWFfkVEx6F64/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvZmVhdHVy/ZWQva3JhdG9zLXBp/Y3R1cmVzLTRhaXdy/eWZ1Yng3cGRoZ2Eu/anBn",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["React", "Express", "Node", "Sass"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "title": "Weather App",
+    "imageSrc": "https://imgs.search.brave.com/pjIvvtzzpR4cpCWc1xrh8TYCNVFTZgXvYGO9-Z0YWJ8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zZWVr/bG9nby5jb20vaW1h/Z2VzL1cvd2VhdGhl/ci1pb3MtbG9nby02/OUVFMjEyNDgzLXNl/ZWtsb2dvLmNvbS5w/bmc",
+    "description": "A React-based weather app provides real-time weather updates with a dynamic and user-friendly interface.",
+    "skills": ["React","TailwindCSS"],
+    "demo": "https://aman-krishnarth.github.io/WeatherApp/",
+    "source": "https://github.com/Aman-Krishnarth/WeatherApp"
   },
   {
-    "title": "Project C",
-    "imageSrc": "https://imgs.search.brave.com/42flTzuOeEnVUP3anL_RFL1nL0PDI4fPWFfkVEx6F64/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvZmVhdHVy/ZWQva3JhdG9zLXBp/Y3R1cmVzLTRhaXdy/eWZ1Yng3cGRoZ2Eu/anBn",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["React", "Express", "Node"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "title": "Sudoku Game",
+    "imageSrc": "https://imgs.search.brave.com/KIKLHqQ-8UZhHgWfTn_jsqITyMqnWCdY4mtSbCf0dQs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/ZHJpYmJibGUuY29t/L3VzZXJzLzc3ODY2/MS9zY3JlZW5zaG90/cy85NTE2NjQ4L21l/ZGlhL2Q0ZGI4OTU2/MWZkNjc3MzE5OTk1/YWJjNjUwODliYmE4/LnBuZz9yZXNpemU9/NDAweDA",
+    "description": "A React-based Sudoku game features an interactive, user-friendly interface for solving puzzles.",
+    "skills": ["React", "TailwindCSS"],
+    "demo": "https://aman-krishnarth.github.io/SudokuGame/",
+    "source": "https://github.com/Aman-Krishnarth/SudokuGame"
   },
   {
-    "title": "Project C",
-    "imageSrc": "https://imgs.search.brave.com/42flTzuOeEnVUP3anL_RFL1nL0PDI4fPWFfkVEx6F64/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvZmVhdHVy/ZWQva3JhdG9zLXBp/Y3R1cmVzLTRhaXdy/eWZ1Yng3cGRoZ2Eu/anBn",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["React", "Express", "Node"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "title": "2048 Game",
+    "imageSrc": "https://imgs.search.brave.com/4InUcGFJPuanwQ1N0gQ6ddEQGxCEMM39jpsxGmtasrc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy8x/LzE4LzIwNDhfbG9n/by5zdmc",
+    "description": "A React-based 2048 game provides an engaging, interactive experience for merging tiles and reaching high scores.",
+    "skills": ["React", "TailwindCSS"],
+    "demo": "https://aman-krishnarth.github.io/2048/",
+    "source": "https://github.com/Aman-Krishnarth/2048"
   },
   {
-    "title": "Project C",
-    "imageSrc": "https://imgs.search.brave.com/42flTzuOeEnVUP3anL_RFL1nL0PDI4fPWFfkVEx6F64/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvZmVhdHVy/ZWQva3JhdG9zLXBp/Y3R1cmVzLTRhaXdy/eWZ1Yng3cGRoZ2Eu/anBn",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["React", "Express", "Node"],
+    "title": "Calculator",
+    "imageSrc": "https://imgs.search.brave.com/51KeC6MOuoWrY0HJdm-waCu-wkWJFeGk50HtEZA2EuE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudmV4ZWxzLmNv/bS9tZWRpYS91c2Vy/cy8zLzEzNTU1NS9p/c29sYXRlZC9wcmV2/aWV3L2I0NWVkYjZm/NmVlZTZkNzFiY2M1/NGViOTExZTU0ZjNi/LWNhbGN1bGF0b3It/bnVtYmVycy1pY29u/LnBuZw",
+    "description": "A calculator made with HTML, CSS, and JavaScript offers a simple, functional interface for basic arithmetic operations.",
+    "skills": ["HTML", "CSS", "JavaScript"],
     "demo": "https://www.example.com",
-    "source": "https://www.github.com"
-  },
-  {
-    "title": "Project C",
-    "imageSrc": "https://imgs.search.brave.com/42flTzuOeEnVUP3anL_RFL1nL0PDI4fPWFfkVEx6F64/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvZmVhdHVy/ZWQva3JhdG9zLXBp/Y3R1cmVzLTRhaXdy/eWZ1Yng3cGRoZ2Eu/anBn",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["React", "Express", "Node"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
-  },
-  {
-    "title": "Project C",
-    "imageSrc": "https://imgs.search.brave.com/42flTzuOeEnVUP3anL_RFL1nL0PDI4fPWFfkVEx6F64/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvZmVhdHVy/ZWQva3JhdG9zLXBp/Y3R1cmVzLTRhaXdy/eWZ1Yng3cGRoZ2Eu/anBn",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["React", "Express", "Node"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
-  },
-  {
-    "title": "Project C",
-    "imageSrc": "https://imgs.search.brave.com/42flTzuOeEnVUP3anL_RFL1nL0PDI4fPWFfkVEx6F64/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvZmVhdHVy/ZWQva3JhdG9zLXBp/Y3R1cmVzLTRhaXdy/eWZ1Yng3cGRoZ2Eu/anBn",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["React", "Express", "Node"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
-  },
-  {
-    "title": "Project C",
-    "imageSrc": "https://imgs.search.brave.com/42flTzuOeEnVUP3anL_RFL1nL0PDI4fPWFfkVEx6F64/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvZmVhdHVy/ZWQva3JhdG9zLXBp/Y3R1cmVzLTRhaXdy/eWZ1Yng3cGRoZ2Eu/anBn",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["React", "Express", "Node"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
-  },
-  {
-    "title": "Project C",
-    "imageSrc": "https://imgs.search.brave.com/42flTzuOeEnVUP3anL_RFL1nL0PDI4fPWFfkVEx6F64/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvZmVhdHVy/ZWQva3JhdG9zLXBp/Y3R1cmVzLTRhaXdy/eWZ1Yng3cGRoZ2Eu/anBn",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["React", "Express", "Node"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "source": "https://github.com/Aman-Krishnarth/Calculator"
   }
 ]

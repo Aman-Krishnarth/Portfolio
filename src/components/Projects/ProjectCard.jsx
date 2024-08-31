@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./ProjectCard.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { CodeXml } from "lucide-react";
 
 function ProjectCard({ project, id }) {
   useEffect(() => {
@@ -43,20 +44,20 @@ function ProjectCard({ project, id }) {
           })}
         </ul>
 
-        <div className="links w-full mt-6 flex justify-around">
+        <div className=" w-full mt-6 flex justify-around">
           <a
             href={project.demo}
-            className="link text-white text-3xl bg-[#576cbc] py-1 px-5 font-medium rounded-full"
+            className=" text-white text-3xl bg-[#576cbc] py-1 px-5 font-medium rounded-full"
             target="_blank"
           >
             Demo
           </a>
           <a
             href={project.source}
-            className="link text-white text-3xl bg-[#576cbc] py-1 px-5 font-medium rounded-full"
+            className=" text-white text-3xl bg-[#576cbc] py-1 px-5 font-medium rounded-full"
             target="_blank"
           >
-            Source
+            <CodeXml className="inline-block" /> Source
           </a>
         </div>
       </div>

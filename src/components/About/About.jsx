@@ -1,11 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { MousePointer2, Server } from "lucide-react";
 import "./about.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function About() {
+  useEffect(() => {
+    AOS.init();
+  });
   return (
-    <section className="p-16 mt-28" id="about">
-      <div className="bg-[#0c0c0c99] rounded-xl p-4">
+    <section
+      className="p-9 mt-28"
+      id="about"
+      data-aos="fade-right"
+      data-aos-delay="50"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="false"
+    >
+      <div className="bg-[#0c0c0c99]  rounded-xl p-4">
         <h2 className="text-white text-4xl tracking-widest font-bold mb-7 text-center">
           ABOUT
         </h2>

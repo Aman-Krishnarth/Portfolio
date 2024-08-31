@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import skills from "../../data/skills.json";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Skills() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
-    <section id="skills" className=" text-white">
+    <section
+      id="skills"
+      className=" text-white"
+      data-aos="fade-right"
+      data-aos-delay="50"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="false"
+    >
       <h2 className="text-white text-4xl tracking-widest font-bold mb-7 text-center">
         SKILLS
       </h2>
@@ -14,6 +29,12 @@ function Skills() {
             <div
               className="bg-[#4c73a3e0] grid grid-rows-[1fr_auto] w-full md:w-3/4 rounded-xl m-auto"
               key={id}
+              data-aos="fade-in"
+              data-aos-delay="100"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
+              data-aos-mirror="true"
+              data-aos-once="false"
             >
               <div className="h-56 w-3/4 m-auto p-3">
                 <img

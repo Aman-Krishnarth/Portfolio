@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./ProjectCard.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function ProjectCard({ project, id }) {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
-    <div key={id} className="container max-w-fit">
+    <div
+      key={id}
+      className="container max-w-fit"
+      data-aos="fade-in"
+      data-aos-delay="100"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="false"
+    >
       <div>
         <div className="h-52 w-[70%] m-auto mb-6">
           <img

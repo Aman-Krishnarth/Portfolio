@@ -12,24 +12,27 @@ function Navbar() {
       </a>
       <div className="flex absolute right-0  md:static mr-[10%] md:mr-0 flex-col md:flex-row items-end md:items-[normal] gap-3 md:gap-0 z-20">
         {menuOpen ? (
-          <X 
-          className="text-white cursor-pointer block md:hidden"
-          onClick={()=>{
-            setMenuOpen(!menuOpen)
-          }}
+          <X
+            className="text-white cursor-pointer block md:hidden"
+            onClick={() => {
+              setMenuOpen(!menuOpen);
+            }}
           />
         ) : (
-          <Menu className="text-white cursor-pointer block md:hidden" 
-          onClick={()=>{
-            setMenuOpen(!menuOpen)
-          }}
+          <Menu
+            className="text-white cursor-pointer block md:hidden"
+            onClick={() => {
+              setMenuOpen(!menuOpen);
+            }}
           />
         )}
 
         <ul
-          className={`${menuOpen? "": "hidden"} md:flex md:gap-11 font-[outfit] text-white  flex-col text-center md:flex-row gap-3 rounded-lg md:rounded-none bg-[#19376d] md:bg-transparent py-6 md:py-0 px-8 md:px-0`}
-          onClick={()=>{
-            setMenuOpen(false)
+          className={`${
+            menuOpen ? "" : "hidden"
+          } md:flex md:gap-11 font-[outfit] text-white  flex-col text-center md:flex-row gap-3 rounded-lg md:rounded-none bg-[#19376d]z md:bg-transparent py-6 md:py-0 px-8 md:px-0`}
+          onClick={() => {
+            setMenuOpen(false);
           }}
         >
           <li>

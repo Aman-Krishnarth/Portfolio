@@ -19,9 +19,9 @@ function Hero() {
       data-aos-once="false"
       data-aos-anchor-placement="top-center"
     >
-      <div className="h-52 w-52 hidden sm:block">
+      <div className="h-56 w-56 hidden sm:block">
         <img
-          src="https://imgs.search.brave.com/42flTzuOeEnVUP3anL_RFL1nL0PDI4fPWFfkVEx6F64/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvZmVhdHVy/ZWQva3JhdG9zLXBp/Y3R1cmVzLTRhaXdy/eWZ1Yng3cGRoZ2Eu/anBn"
+          src="https://cdn.pixabay.com/photo/2024/05/20/16/24/ai-generated-8775742_1280.png"
           alt=""
           className="h-full w-full rounded-full"
         />

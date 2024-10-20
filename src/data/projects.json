@@ -1,5 +1,13 @@
 [
   {
+    "title": "Insta Clone",
+    "imageSrc": "https://imgs.search.brave.com/Yz2QDA3ir3JL_I0qYFne8N2O5GJQpNHavYz-1mlCURQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA1LzMyLzIwLzAz/LzM2MF9GXzUzMjIw/MDM4Ml9LTDZDRGFa/Y3VzaVpPOW5PNVRE/N2hXUUV6OEtvNkJa/Qi5qcGc",
+    "description": "Introducing a sleek Instagram clone built with the MERN stack, featuring real-time communication through Socket.io. Users can seamlessly share photos, like posts, and chat with friends instantly, all within an engaging and responsive interface.",
+    "skills": ["MongoDB", "Express", "React", "NodeJS", "TailwindCSS", "Socket.IO"],
+    "demo": "https://insta-clone-frontend-i077.onrender.com",
+    "source": "https://github.com/Aman-Krishnarth/Insta-Clone"
+  },
+  {
     "title": "Food Delivery App",
     "imageSrc": "https://imgs.search.brave.com/fKK6OKSaVT5u6GzkV0rAfEkqfApTB1CzLjTSHyycvOE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzQzLzY0/LzIyLzQzNjQyMmVl/YWMzYjNkNzliNjdl/MmQzY2ZhNTNiNDRm/LmpwZw",
     "description": "Discover deliciousness at your fingertips with our MERN-based food delivery app, offering seamless browsing, real-time order tracking, and a personalized dining experience—all in one place!",
